@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bb1ma875g0gpc"]
+
+[ext_resource type="PackedScene" uid="uid://buv04qf2qgn17" path="res://models/drone_static/Drone_Base_static.glb" id="1_vhte0"]
+[ext_resource type="Texture2D" uid="uid://o88njd3dqo6c" path="res://models/drone_static/Drone_Base_static_DefaultMaterial_BaseColor.png" id="2_owr2o"]
+[ext_resource type="Texture2D" uid="uid://b0y3hv5p48nhe" path="res://models/drone_static/Drone_Base_static_DefaultMaterial_Metallic.png" id="3_rg6yi"]
+[ext_resource type="Texture2D" uid="uid://qrplp5aabhne" path="res://models/drone_static/Drone_Base_static_DefaultMaterial_Normal.png" id="4_1spdo"]
+[ext_resource type="Texture2D" uid="uid://cw13p1f7a6rh7" path="res://models/drone_static/Drone_Base_static_DefaultMaterial_Roughness.png" id="5_grjij"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cej73"]
+albedo_texture = ExtResource("2_owr2o")
+metallic = 1.0
+metallic_texture = ExtResource("3_rg6yi")
+roughness_texture = ExtResource("5_grjij")
+normal_enabled = true
+normal_texture = ExtResource("4_1spdo")
+
+[node name="Drone_Base_static" unique_id=765988726 instance=ExtResource("1_vhte0")]
+
+[node name="Body" parent="." index="0" unique_id=1246952065]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_cej73")

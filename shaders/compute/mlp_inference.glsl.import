@@ -1,0 +1,14 @@
+[remap]
+
+importer="glsl"
+type="RDShaderFile"
+uid="uid://da0hvy2du8wy7"
+path="res://.godot/imported/mlp_inference.glsl-3d2d0d4d6ae3c825c61479ef0d82f6c3.res"
+
+[deps]
+
+source_file="res://shaders/compute/mlp_inference.glsl"
+dest_files=["res://.godot/imported/mlp_inference.glsl-3d2d0d4d6ae3c825c61479ef0d82f6c3.res"]
+
+[params]
+

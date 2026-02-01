@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://gfpn53yvseuv"]
+
+[ext_resource type="PackedScene" uid="uid://bb1ma875g0gpc" path="res://models/drone_static/drone_base_static.tscn" id="1_5n7f2"]
+[ext_resource type="Script" uid="uid://dse3pm2c101ag" path="res://scripts/controllers/drone.gd" id="1_b4ub4"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5n7f2"]
+size = Vector3(0.6191406, 0.14971161, 0.6208496)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5n7f2"]
+albedo_color = Color(0, 0, 0, 1)
+roughness = 0.0
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 16.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_b4ub4"]
+
+[node name="SimpleDrone" type="RigidBody3D" unique_id=371950845]
+script = ExtResource("1_b4ub4")
+
+[node name="CollisionShape" type="CollisionShape3D" parent="." unique_id=1237883278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.02049619, 0)
+shape = SubResource("BoxShape3D_5n7f2")
+
+[node name="Visuals" parent="." unique_id=765988726 instance=ExtResource("1_5n7f2")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Visuals" unique_id=1601854388]
+transform = Transform3D(-0.028462972, 0, 0, 0, -0.028462972, 0, 0, 0, -0.02, 0, -0.019047529, 0.2301144)
+material_override = SubResource("StandardMaterial3D_5n7f2")
+mesh = SubResource("SphereMesh_b4ub4")
+
+[node name="FrontLeft" type="Marker3D" parent="." unique_id=2107765513]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.07555455, -0.2)
+
+[node name="FrontRight" type="Marker3D" parent="." unique_id=1942787199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.07555455, -0.2)
+
+[node name="RearLeft" type="Marker3D" parent="." unique_id=1371931764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.2, 0.07555455, 0.2)
+
+[node name="RearRight" type="Marker3D" parent="." unique_id=92433740]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0.07555455, 0.2)
