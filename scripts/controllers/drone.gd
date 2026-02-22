@@ -54,6 +54,12 @@ func _physics_process(delta: float) -> void:
 		var lift_direction = global_transform.basis.y
 		apply_force(lift_direction * power, marker.global_position - global_position)
 		
+		var arrow_scale = 0.1
+		var p0 = marker.global_position
+		var p1 = p0 + lift_direction * power * arrow_scale
+		
+		DebugDraw3D.draw_arrow(p0, p1, Color.GREEN, 0.01)
+		
 		# Reactive Torque: To make the drone rotate (Yaw)
 		# Motors spin in opposite directions, so we apply a small rotational force
 		var spin_dir = -1
