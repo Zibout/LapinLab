@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djpbtdin37qdp"
-path.s3tc="res://.godot/imported/Lapin_Lapin_release_no_texture_Lapin_BaseColor.png-b4f80333893ac67a70efc19f916de6d2.s3tc.ctex"
+uid="uid://dv8x1av44sr5j"
+path.s3tc="res://.godot/imported/glasses_Lapin_02_21_export_Glasses_Normal.png-6b565a570ea7178e2216363f3ab04322.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "4b0c774f7b4be7e7bbf03c78d3b87cb6"
+"md5": "989d956c2f5fbda80ac2b4ef7c23943a"
 }
 
 [deps]
 
-source_file="res://models/lapin/Lapin_Lapin_release_no_texture_Lapin_BaseColor.png"
-dest_files=["res://.godot/imported/Lapin_Lapin_release_no_texture_Lapin_BaseColor.png-b4f80333893ac67a70efc19f916de6d2.s3tc.ctex"]
+source_file="res://models/accessories/glasses_Lapin_02_21_export_Glasses_Normal.png"
+dest_files=["res://.godot/imported/glasses_Lapin_02_21_export_Glasses_Normal.png-6b565a570ea7178e2216363f3ab04322.s3tc.ctex"]
 
 [params]
 
@@ -25,12 +25,12 @@ compress/lossy_quality=0.7
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://models/accessories/glasses_Lapin_02_21_export_Glasses_Normal.png"
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2

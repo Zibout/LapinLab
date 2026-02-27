@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://crhwg5spsthdd"
-path="res://.godot/imported/LapinHeadShapeKeys.glb-082e5c9ef00c31f6a606d6c45ae0dee5.scn"
+uid="uid://ba3vdic1cq5v1"
+path="res://.godot/imported/T-Pose.fbx-76cadabbbfce21649e2c5a8f8a822dd2.scn"
 
 [deps]
 
-source_file="res://models/lapin/LapinHeadShapeKeys.glb"
-dest_files=["res://.godot/imported/LapinHeadShapeKeys.glb-082e5c9ef00c31f6a606d6c45ae0dee5.scn"]
+source_file="res://models/lapin/animations/T-Pose.fbx"
+dest_files=["res://.godot/imported/T-Pose.fbx-76cadabbbfce21649e2c5a8f8a822dd2.scn"]
 
 [params]
 
@@ -30,13 +30,21 @@ meshes/force_disable_compression=false
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
-animation/trimming=false
+animation/trimming=true
 animation/remove_immutable_tracks=true
 animation/import_rest_as_RESET=false
 import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
-gltf/naming_version=2
-gltf/embedded_image_handling=1
+_subresources={
+"nodes": {
+"PATH:Skeleton3D": {
+"retarget/bone_map": Resource("uid://dhb0n7ep16h8v", "res://models/lapin/anim_bone_map.tres")
+}
+}
+}
+fbx/importer=0
+fbx/allow_geometry_helper_nodes=false
+fbx/embedded_image_handling=1
+fbx/naming_version=2

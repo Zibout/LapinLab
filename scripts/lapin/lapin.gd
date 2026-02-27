@@ -9,16 +9,59 @@ extends Node3D
 
 @export var face_mesh: MeshInstance3D 
 
-@export var skeleton: Skeleton3D
 
 @export var node_eye_l: Node3D
 @export var node_eye_r: Node3D
 @export var node_head_target: Node3D
 
+@export var left_hand_IK: TwoBoneIK3D
+@export var left_hand_target: Node3D
+@export var left_hand_pole: Node3D
+
+@export var right_hand_IK: TwoBoneIK3D
+@export var right_hand_target: Node3D
+@export var right_hand_pole: Node3D
+
 func _ready() -> void:
 	print("Blend shape count:", str(face_mesh.get_blend_shape_count()))
 	
+func _process(delta: float) -> void:
 	
+	## Use the character IK solver
+	#left_hand_IK.influence = Input.get_action_strength("use_arm_left")
+	#
+	#var left_arm_input = Input.get_vector("right_stick_left", "right_stick_right", "right_stick_up", "right_stick_down")
+#
+	#var left_target_x = lerp(0.0, 0.5, left_arm_input.x*0.5+0.5)
+	#var left_target_y = lerp(1.5, 0.2, left_arm_input.y*0.5+0.5)
+	#left_hand_target.position.x = left_target_x
+	#left_hand_target.position.y = left_target_y
+	#left_hand_target.position.z = lerp(0.3, -0.05, left_arm_input.x*0.5+0.5)
+#
+	#var left_pole_x = lerp(0.5, 0.1, left_arm_input.x*0.5+0.5)
+	#var left_pole_y = lerp(0.2, 1.5, left_arm_input.y*0.5+0.5)
+	#left_hand_pole.position.x = left_pole_x
+	#left_hand_pole.position.y = left_pole_y
+	#left_hand_pole.position.z = -0.3
+	#
+	#right_hand_IK.influence = Input.get_action_strength("use_arm_right")
+	#var right_arm_input = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
+	#
+	#var right_target_x = lerp(-0.5, 0.0, right_arm_input.x*0.5+0.5)
+	#var right_target_y = lerp(1.5, 0.2, right_arm_input.y*0.5+0.5)
+	#right_hand_target.position.x = right_target_x
+	#right_hand_target.position.y = right_target_y
+	#right_hand_target.position.z = lerp(-0.05, 0.3, right_arm_input.x*0.5+0.5)
+#
+	#var right_pole_x = lerp(0.1, -0.5, right_arm_input.x*0.5+0.5)
+	#var right_pole_y = lerp(0.2, 1.5, right_arm_input.y*0.5+0.5)
+	#right_hand_pole.position.x = right_pole_x
+	#right_hand_pole.position.y = right_pole_y
+	#right_hand_pole.position.z = -0.3
+	
+		
+	
+	pass
 	
 func _on_face_data_received(blend_shapes: Dictionary, orientation: Dictionary):
 	
@@ -44,9 +87,9 @@ func _on_face_data_received(blend_shapes: Dictionary, orientation: Dictionary):
 		else:
 			print(shape_name)
 		
-	eye_look_l.x += blend_shapes["eyeLookInLeft"] - blend_shapes["eyeLookOutLeft"]
+	eye_look_l.x -= blend_shapes["eyeLookInLeft"] - blend_shapes["eyeLookOutLeft"]
 	eye_look_l.y += blend_shapes["eyeLookDownLeft"] - blend_shapes["eyeLookUpLeft"]
-	eye_look_r.x += blend_shapes["eyeLookOutRight"] - blend_shapes["eyeLookInRight"]
+	eye_look_r.x -= blend_shapes["eyeLookOutRight"] - blend_shapes["eyeLookInRight"]
 	eye_look_r.y += blend_shapes["eyeLookDownRight"] - blend_shapes["eyeLookUpRight"]
 
 
@@ -63,7 +106,7 @@ func _on_face_data_received(blend_shapes: Dictionary, orientation: Dictionary):
 	
 	if node_head_target:
 		node_head_target.rotation.x = (pitch * rotation_multiplier)
-		node_head_target.rotation.y = -(yaw * rotation_multiplier) # Often needs inversion
+		node_head_target.rotation.y = (yaw * rotation_multiplier) # Often needs inversion
 		node_head_target.rotation.z = (roll * rotation_multiplier)
 	
 	var eye_movement_mult := 0.8

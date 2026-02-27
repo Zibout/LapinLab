@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cul6cctlqymuy"
-path.s3tc="res://.godot/imported/LapinHeadShapeKeys_Eye_DefaultMaterial_BaseColor.png-0722dc3b110b7495d37647980fc5db65.s3tc.ctex"
+uid="uid://diyyjf3ixk2ax"
+path.s3tc="res://.godot/imported/glasses_Lapin_02_21_export_Glasses_BaseColor.png-0d0a4fda314d195cb1079e81373fc0a8.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "25005fd9fa278ca1d24662e48effb6b1"
+"md5": "da99f7fa6b05fa80cf3a6e8c2d429fb5"
 }
 
 [deps]
 
-source_file="res://models/lapin/LapinHeadShapeKeys_Eye_DefaultMaterial_BaseColor.png"
-dest_files=["res://.godot/imported/LapinHeadShapeKeys_Eye_DefaultMaterial_BaseColor.png-0722dc3b110b7495d37647980fc5db65.s3tc.ctex"]
+source_file="res://models/accessories/glasses_Lapin_02_21_export_Glasses_BaseColor.png"
+dest_files=["res://.godot/imported/glasses_Lapin_02_21_export_Glasses_BaseColor.png-0d0a4fda314d195cb1079e81373fc0a8.s3tc.ctex"]
 
 [params]
 

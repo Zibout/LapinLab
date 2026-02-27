@@ -2,20 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djpbtdin37qdp"
-path.s3tc="res://.godot/imported/Lapin_Lapin_release_no_texture_Lapin_BaseColor.png-b4f80333893ac67a70efc19f916de6d2.s3tc.ctex"
+uid="uid://cgiuj62tg8yon"
+path.s3tc="res://.godot/imported/glasses_Lapin_02_21_export_Glasses_Metallic-Lapin_02_21_export_Glasses_Roughness.png-a0959ee9f060a265f5bcd7a6a0f8431b.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "4b0c774f7b4be7e7bbf03c78d3b87cb6"
+"md5": "9476d4a49b79969f5e81b69a47c421cc"
 }
 
 [deps]
 
-source_file="res://models/lapin/Lapin_Lapin_release_no_texture_Lapin_BaseColor.png"
-dest_files=["res://.godot/imported/Lapin_Lapin_release_no_texture_Lapin_BaseColor.png-b4f80333893ac67a70efc19f916de6d2.s3tc.ctex"]
+source_file="res://models/accessories/glasses_Lapin_02_21_export_Glasses_Metallic-Lapin_02_21_export_Glasses_Roughness.png"
+dest_files=["res://.godot/imported/glasses_Lapin_02_21_export_Glasses_Metallic-Lapin_02_21_export_Glasses_Roughness.png-a0959ee9f060a265f5bcd7a6a0f8431b.s3tc.ctex"]
 
 [params]
 

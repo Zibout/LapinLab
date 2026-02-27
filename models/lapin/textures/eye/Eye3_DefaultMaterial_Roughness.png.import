@@ -2,20 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5qy7ivhhbnsj"
-path.s3tc="res://.godot/imported/LapinHeadShapeKeys_Eye_DefaultMaterial_Roughness.png-3e2ee766d4c6c0716ffbfdb76fb327ab.s3tc.ctex"
+uid="uid://c3nbyjgimdfld"
+path.s3tc="res://.godot/imported/Eye3_DefaultMaterial_Roughness.png-3d435df470518a1f2ea610a8f16c2c5c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
-generator_parameters={
-"md5": "4986b5c01e70a9703dc7713ab01005fe"
-}
 
 [deps]
 
-source_file="res://models/lapin/LapinHeadShapeKeys_Eye_DefaultMaterial_Roughness.png"
-dest_files=["res://.godot/imported/LapinHeadShapeKeys_Eye_DefaultMaterial_Roughness.png-3e2ee766d4c6c0716ffbfdb76fb327ab.s3tc.ctex"]
+source_file="res://models/lapin/textures/eye/Eye3_DefaultMaterial_Roughness.png"
+dest_files=["res://.godot/imported/Eye3_DefaultMaterial_Roughness.png-3d435df470518a1f2ea610a8f16c2c5c.s3tc.ctex"]
 
 [params]
 

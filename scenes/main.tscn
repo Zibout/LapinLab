@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://b3rf4ljjjmn88" path="res://scenes/Lapin.tscn" id="2_sugp2"]
 [ext_resource type="Script" uid="uid://fs607qv8y6i" path="res://scripts/tools/face_tracking_server.gd" id="3_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://tcg77i5d3lff" path="res://scenes/debug/face_capture_debug.tscn" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://doe6pbarrk7rn" path="res://models/lab/lab.glb" id="5_tefeu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o5qli"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -16,15 +17,23 @@ sky_material = SubResource("ProceduralSkyMaterial_o5qli")
 background_mode = 2
 sky = SubResource("Sky_0wfyh")
 tonemap_mode = 2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
 glow_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sgp6g"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_o5qli"]
-size = Vector2(50, 50)
+fog_enabled = true
+fog_light_color = Color(0.9405, 0.95, 0.94493335, 1)
+fog_density = 0.001
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.01
+adjustment_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o5qli"]
 size = Vector3(50.523438, 50.526367, 3.2731934)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tbgi4"]
 
 [node name="Main" type="Node" unique_id=1648398092]
 
@@ -33,24 +42,8 @@ transform = Transform3D(0.9999969, -0.0024929887, -0.00028115298, 0.002482034, 0
 fov = 54.4
 script = ExtResource("1_sugp2")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=891051591]
-transform = Transform3D(-0.73533285, -0.47895396, 0.47946712, 0.67591625, -0.4669231, 0.5701929, -0.049221843, 0.74336135, 0.6670768, 0, 3.7123492, 0)
-light_energy = 0.01
-shadow_enabled = true
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1783846392]
 environment = SubResource("Environment_sugp2")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1641964083]
-transform = Transform3D(0.9999991, -0.00080997346, -0.0010197638, 0.0010200944, 0.00039616207, 0.9999994, -0.0008095572, -0.9999996, 0.00039701207, 7.724762e-05, -0.0017862916, 0.00041365623)
-material_override = SubResource("StandardMaterial3D_sgp6g")
-mesh = SubResource("QuadMesh_o5qli")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=1572480367]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=903965051]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.820766e-11, -1.637085)
-shape = SubResource("BoxShape3D_o5qli")
 
 [node name="Lapin" parent="." unique_id=1457059548 instance=ExtResource("2_sugp2")]
 
@@ -58,19 +51,63 @@ shape = SubResource("BoxShape3D_o5qli")
 script = ExtResource("3_jyhfs")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=937423029]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0697043, 0.9815001, 0.7253628)
-light_color = Color(0.84705883, 0.21568628, 0.16470589, 1)
-
-[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1923856634]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16826874, 0.9815001, -1.9123955)
-light_color = Color(0.6511703, 0.42410976, 0.20151791, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9393697, 1.1177374, -0.9867556)
+light_color = Color(1, 0.49, 1, 1)
+shadow_enabled = true
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=1515085961]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7034467, 0.9815001, 0.99543905)
-light_color = Color(0, 0.55321664, 0.5546326, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.504237, 1.0871234, -0.6669718)
+light_color = Color(0, 0.6117647, 1, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1579730660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6635814, 1.30509, -5.009525)
+light_color = Color(0.88011104, 0.7192691, 0.35758075, 1)
+shadow_enabled = true
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=594823212]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2403717, 3.218968, -21.077631)
+light_color = Color(0.05000007, 1, 0, 1)
+
+[node name="RimLight" type="Node3D" parent="." unique_id=1325519057]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0602899, 1.5638552)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="RimLight" unique_id=472224291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15190649, -0.27419996)
+light_energy = 0.083
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="RimLight" unique_id=1450835975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.054469407, 0.08676827, -0.27419996)
+light_energy = 0.083
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="RimLight" unique_id=292040048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050818086, 0.08676827, -0.27419996)
+light_energy = 0.083
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="RimLight" unique_id=3650455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.051359534, -0.27419996)
+light_energy = 0.083
 
 [node name="FaceCaptureDebug" parent="." unique_id=1011517982 instance=ExtResource("5_tbgi4")]
 visible = false
+
+[node name="lab" parent="." unique_id=1545438347 instance=ExtResource("5_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.004142761, -1.1920929e-07, -0.00097584724)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1572480367]
+transform = Transform3D(0.9999991, -0.00080997346, -0.0010197638, 0.0010200944, 0.00039616207, 0.9999994, -0.0008095572, -0.9999996, 0.00039701207, 7.724762e-05, -0.0017862916, 0.00041365623)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=903965051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.820766e-11, -1.637085)
+shape = SubResource("BoxShape3D_o5qli")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=724796809]
+transform = Transform3D(42.755, 0, 0, 0, 1, 0, 0, 0, 45.25, 0, 5.6749578, 0)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1899498239]
+transform = Transform3D(42.755, 0, 0, 0, 1, 0, 0, 0, 45.25, 0, -0.84971476, 0)
+mesh = SubResource("BoxMesh_tbgi4")
 
 [connection signal="face_data_received" from="FaceCaptureServer" to="Lapin" method="_on_face_data_received"]
 [connection signal="face_data_received" from="FaceCaptureServer" to="FaceCaptureDebug" method="_on_face_data_received"]
