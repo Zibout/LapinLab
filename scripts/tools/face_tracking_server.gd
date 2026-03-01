@@ -78,6 +78,10 @@ func parse_binary_data(packet_data: PackedByteArray):
 		var shape_name = BLEND_SHAPE_NAMES[i]
 		blend_shapes[shape_name] = value
 		
+	blend_shapes["jawRight"] = blend_shapes["jawRight"] * 3.0
+	blend_shapes["jawLeft"] = blend_shapes["jawLeft"] * 3.0
+	blend_shapes["jawForward"] = blend_shapes["jawForward"] * 3.0
+		
 	# Emit the dictionary to your character script just like before
 	emit_signal("face_data_received", blend_shapes, orientation)
 

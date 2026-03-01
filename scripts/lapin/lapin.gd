@@ -22,10 +22,19 @@ extends Node3D
 @export var right_hand_target: Node3D
 @export var right_hand_pole: Node3D
 
+@export var animation_tree: AnimationTree
+
 func _ready() -> void:
 	print("Blend shape count:", str(face_mesh.get_blend_shape_count()))
 	
 func _process(delta: float) -> void:
+	
+	var anim_control = Input.get_vector("right_stick_left", "right_stick_right", "right_stick_up", "right_stick_down")
+	if animation_tree:
+		var enable_arm_anims = min(anim_control.length() / 0.1, 1.0)
+		animation_tree.set("parameters/Blend2/blend_amount", enable_arm_anims)
+		
+		animation_tree.set("parameters/BlendSpace2D/blend_position", anim_control)
 	
 	## Use the character IK solver
 	#left_hand_IK.influence = Input.get_action_strength("use_arm_left")
@@ -98,7 +107,7 @@ func _on_face_data_received(blend_shapes: Dictionary, orientation: Dictionary):
 	# Note: You might need to invert some axes depending on your model's import settings.
 	var pitch = orientation.get("pitch", 0.0)
 	var yaw = orientation.get("yaw", 0.0)
-	var roll = orientation.get("roll", 0.0)
+	var roll = -orientation.get("roll", 0.0)
 	
 	# Create a new rotation basis from Euler angles (YXZ order is common for heads)
 	# You may need to swap these or negate them based on your specific 3D model orientation

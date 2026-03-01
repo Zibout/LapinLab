@@ -19,10 +19,7 @@ sky = SubResource("Sky_0wfyh")
 tonemap_mode = 2
 ssr_enabled = true
 ssao_enabled = true
-ssil_enabled = true
-sdfgi_enabled = true
 sdfgi_use_occlusion = true
-glow_enabled = true
 fog_enabled = true
 fog_light_color = Color(0.9405, 0.95, 0.94493335, 1)
 fog_density = 0.001
@@ -38,9 +35,60 @@ size = Vector3(50.523438, 50.526367, 3.2731934)
 [node name="Main" type="Node" unique_id=1648398092]
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=413034235]
-transform = Transform3D(0.9999969, -0.0024929887, -0.00028115298, 0.002482034, 0.999423, -0.03387517, 0.0003654412, 0.033874366, 0.99942607, -0.008973122, 1.0626855, 1.6167631)
+transform = Transform3D(0.99999684, -0.0024929892, -0.00028115313, 0.0024875335, 0.9707187, 0.24020642, -0.0003259114, -0.24020638, 0.9707218, -0.008973122, 1.2790948, 1.330463)
 fov = 54.4
 script = ExtResource("1_sugp2")
+
+[node name="RimLight" type="Node3D" parent="Camera3D" unique_id=1325519057]
+transform = Transform3D(0.71499777, 0.0017746541, 0.00026129044, -0.0017824869, 0.71458745, 0.02422017, -0.00020102439, -0.024220746, 0.7145896, 0.008947811, -0.004208803, -0.052799106)
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Camera3D/RimLight" unique_id=472224291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23587573, -0.27419996)
+light_energy = 0.03
+light_volumetric_fog_energy = 0.335
+light_size = 0.03
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="Camera3D/RimLight" unique_id=1450835975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14153746, 0.08676827, -0.27419996)
+light_energy = 0.03
+light_volumetric_fog_energy = 0.335
+light_size = 0.03
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="Camera3D/RimLight" unique_id=292040048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16062617, 0.08676827, -0.27419996)
+light_energy = 0.03
+light_volumetric_fog_energy = 0.335
+light_size = 0.03
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="Camera3D/RimLight" unique_id=3650455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.054744124, -0.27419996)
+light_energy = 0.03
+light_volumetric_fog_energy = 0.335
+light_size = 0.03
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="Camera3D/RimLight" unique_id=1593865466]
+transform = Transform3D(0.7213252, 0.69259655, 0, -0.69259655, 0.7213252, 0, 0, 0, 1, 0.10328612, 0.19815755, -0.27419996)
+light_energy = 0.03
+light_volumetric_fog_energy = 0.335
+light_size = 0.03
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="Camera3D/RimLight" unique_id=189087732]
+transform = Transform3D(0.7213252, 0.69259655, 0, -0.69259655, 0.7213252, 0, 0, 0, 1, -0.102079734, 0.18863094, -0.27419996)
+light_energy = 0.03
+light_volumetric_fog_energy = 0.335
+light_size = 0.03
+
+[node name="OmniLight3D10" type="OmniLight3D" parent="Camera3D/RimLight" unique_id=789683524]
+transform = Transform3D(0.7213252, 0.69259655, 0, -0.69259655, 0.7213252, 0, 0, 0, 1, 0.11587851, -0.020646572, -0.27419996)
+light_energy = 0.03
+light_volumetric_fog_energy = 0.335
+light_size = 0.03
+
+[node name="OmniLight3D11" type="OmniLight3D" parent="Camera3D/RimLight" unique_id=744552898]
+transform = Transform3D(0.7213252, 0.69259655, 0, -0.69259655, 0.7213252, 0, 0, 0, 1, -0.09799619, -0.011473894, -0.27419996)
+light_energy = 0.03
+light_volumetric_fog_energy = 0.335
+light_size = 0.03
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1783846392]
 environment = SubResource("Environment_sugp2")
@@ -61,32 +109,14 @@ light_color = Color(0, 0.6117647, 1, 1)
 shadow_enabled = true
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1579730660]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6635814, 1.30509, -5.009525)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6635814, 1.30509, -4.9283433)
 light_color = Color(0.88011104, 0.7192691, 0.35758075, 1)
+light_energy = 0.236
 shadow_enabled = true
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="." unique_id=594823212]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.2403717, 3.218968, -21.077631)
 light_color = Color(0.05000007, 1, 0, 1)
-
-[node name="RimLight" type="Node3D" parent="." unique_id=1325519057]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0602899, 1.5638552)
-
-[node name="OmniLight3D4" type="OmniLight3D" parent="RimLight" unique_id=472224291]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15190649, -0.27419996)
-light_energy = 0.083
-
-[node name="OmniLight3D5" type="OmniLight3D" parent="RimLight" unique_id=1450835975]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.054469407, 0.08676827, -0.27419996)
-light_energy = 0.083
-
-[node name="OmniLight3D6" type="OmniLight3D" parent="RimLight" unique_id=292040048]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.050818086, 0.08676827, -0.27419996)
-light_energy = 0.083
-
-[node name="OmniLight3D7" type="OmniLight3D" parent="RimLight" unique_id=3650455]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.051359534, -0.27419996)
-light_energy = 0.083
 
 [node name="FaceCaptureDebug" parent="." unique_id=1011517982 instance=ExtResource("5_tbgi4")]
 visible = false
@@ -103,6 +133,26 @@ shape = SubResource("BoxShape3D_o5qli")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=724796809]
 transform = Transform3D(42.755, 0, 0, 0, 1, 0, 0, 0, 45.25, 0, 5.6749578, 0)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="." unique_id=847616713]
+transform = Transform3D(-3.2805397e-07, -1, 0, 7.505, -4.371139e-08, 0, 0, 0, 11.16, -5.248396, 3.133256, 0.6510055)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="." unique_id=1774064392]
+transform = Transform3D(1.4339695e-14, 4.371139e-08, -11.16, 7.505, -4.371139e-08, 0, -3.2805397e-07, -1, -4.878191e-07, 0.11968899, 3.133256, 5.22565)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="." unique_id=334177692]
+transform = Transform3D(-3.2805397e-07, -1, 0, 7.505, -4.371139e-08, 0, 0, 0, 11.16, 5.273678, 3.133256, 0.4496715)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="." unique_id=103994026]
+transform = Transform3D(1.4339695e-14, 4.371139e-08, -11.16, 7.505, -4.371139e-08, 0, -3.2805397e-07, -1, -4.878191e-07, 10.9604435, 3.133256, -4.94252)
+mesh = SubResource("BoxMesh_tbgi4")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="." unique_id=1073802806]
+transform = Transform3D(1.4339695e-14, 4.371139e-08, -11.16, 7.505, -4.371139e-08, 0, -3.2805397e-07, -1, -4.878191e-07, -10.385742, 3.133256, -4.531271)
 mesh = SubResource("BoxMesh_tbgi4")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=1899498239]
