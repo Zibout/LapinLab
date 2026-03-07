@@ -24,15 +24,21 @@ extends Node3D
 
 @export var animation_tree: AnimationTree
 
+@export var animation_control_smooth := 0.1
+var anim_control: Vector2 = Vector2(0, 0)
+var anim_use: float = 0.0
+
 func _ready() -> void:
 	print("Blend shape count:", str(face_mesh.get_blend_shape_count()))
 	
 func _process(delta: float) -> void:
 	
-	var anim_control = Input.get_vector("right_stick_left", "right_stick_right", "right_stick_up", "right_stick_down")
+	var anim_control_tmp = Input.get_vector("right_stick_left", "right_stick_right", "right_stick_down", "right_stick_up")
+	anim_control = anim_control * (1.0-animation_control_smooth)+ animation_control_smooth * anim_control_tmp
+	anim_use = anim_use * (1.0-animation_control_smooth)+ animation_control_smooth * Input.get_action_strength("use_arm_left")
 	if animation_tree:
-		var enable_arm_anims = min(anim_control.length() / 0.1, 1.0)
-		animation_tree.set("parameters/Blend2/blend_amount", enable_arm_anims)
+		#var enable_arm_anims = min(anim_control.length() / 0.1, 1.0)
+		animation_tree.set("parameters/Blend2/blend_amount", anim_use)
 		
 		animation_tree.set("parameters/BlendSpace2D/blend_position", anim_control)
 	

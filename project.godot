@@ -13,7 +13,7 @@ config_version=5
 config/name="LapinLab"
 run/main_scene="uid://dk3erfrj2bull"
 config/features=PackedStringArray("4.6", "Mobile")
-boot_splash/bg_color=Color(0.7295302, 0.39071423, 0.70818204, 1)
+boot_splash/bg_color=Color(0.25456166, 0.5901762, 0.66805285, 1)
 config/icon="res://icon.svg"
 
 [autoload]
@@ -29,6 +29,10 @@ settings/addon_root_folder="res://addons/debug_draw_3d"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/image=""
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/lapin_ml/plugin.cfg")
 
 [input]
 
@@ -111,3 +115,4 @@ right_stick_left={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+anti_aliasing/quality/msaa_3d=2

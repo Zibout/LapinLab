@@ -16,6 +16,7 @@ sky_material = SubResource("ProceduralSkyMaterial_o5qli")
 [sub_resource type="Environment" id="Environment_sugp2"]
 background_mode = 2
 sky = SubResource("Sky_0wfyh")
+ambient_light_source = 3
 tonemap_mode = 2
 ssr_enabled = true
 ssao_enabled = true
@@ -24,7 +25,7 @@ fog_enabled = true
 fog_light_color = Color(0.9405, 0.95, 0.94493335, 1)
 fog_density = 0.001
 volumetric_fog_enabled = true
-volumetric_fog_density = 0.01
+volumetric_fog_density = 0.0656
 adjustment_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_o5qli"]
