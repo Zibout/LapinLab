@@ -11,14 +11,10 @@ config_version=5
 [application]
 
 config/name="LapinLab"
-run/main_scene="uid://dk3erfrj2bull"
+run/main_scene="uid://bbj3p6w8dxefl"
 config/features=PackedStringArray("4.6", "Mobile")
 boot_splash/bg_color=Color(0.25456166, 0.5901762, 0.66805285, 1)
 config/icon="res://icon.svg"
-
-[autoload]
-
-Global="*uid://qshdvo42gyo7"
 
 [debug_draw_3d]
 
@@ -30,9 +26,13 @@ window/size/viewport_width=1280
 window/size/viewport_height=720
 window/image=""
 
+[editor]
+
+movie_writer/movie_file="D:/Git/LapinLab/movie.avi"
+
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/lapin_ml/plugin.cfg")
+enabled=PackedStringArray("res://addons/mocaplab/plugin.cfg")
 
 [input]
 

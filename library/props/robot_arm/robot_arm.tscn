@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d3ww3001sjxyb"]
+
+[ext_resource type="PackedScene" uid="uid://crlta8hbs7ewx" path="res://library/props/robot_arm/robot_arm.glb" id="1_n08uh"]
+[ext_resource type="Script" uid="uid://df0trn8q1bn4" path="res://library/props/robot_arm/robot_arm_random_anim.gd" id="1_yj248"]
+
+[node name="RobotArm" type="Node3D" unique_id=1988974409]
+script = ExtResource("1_yj248")
+
+[node name="robot_arm" parent="." unique_id=105084090 instance=ExtResource("1_n08uh")]
+
+[node name="Skeleton3D" parent="robot_arm/Armature" parent_id_path=PackedInt32Array(105084090, 1390783001) index="0" unique_id=255470706]
+bones/0/rotation = Quaternion(-0.011361468, 1.19201566e-07, -1.3543885e-09, 0.99993545)
+bones/1/rotation = Quaternion(0.5577697, -1.9342817e-15, 1.3298262e-07, 0.82999575)
+bones/2/rotation = Quaternion(0.9664417, -1.1270815e-14, 2.3041756e-07, -0.25688607)
+bones/4/rotation = Quaternion(-0.105828255, -5.181898e-15, -2.5231433e-08, 0.9943844)
+bones/5/rotation = Quaternion(-0.30013743, -2.4292637e-14, -7.1558325e-08, 0.953896)
+bones/6/rotation = Quaternion(-0.18865654, -1.4922911e-14, -4.4979206e-08, 0.98204315)
+bones/8/rotation = Quaternion(0.16373456, -0.0032548641, 0.034451302, 0.9858973)
+bones/9/rotation = Quaternion(0.2416826, -0.004035708, 0.017341247, 0.970192)
+bones/10/rotation = Quaternion(0.25661466, 0.009811341, 0.02065959, 0.96624315)
+bones/12/rotation = Quaternion(0.13984387, -0.4044783, -0.091867134, 0.8991115)
+bones/13/rotation = Quaternion(0.03256466, -0.29016623, -0.24010566, 0.92579293)
+bones/14/rotation = Quaternion(0.017272243, -0.009005746, -0.2705911, 0.9624973)
+
+[editable path="robot_arm"]

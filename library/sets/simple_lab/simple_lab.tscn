@@ -1,0 +1,123 @@
+[gd_scene format=3 uid="uid://ct3xp0q0dv11e"]
+
+[ext_resource type="PackedScene" uid="uid://o2ahwo62wsgc" path="res://library/props/desk/desk.glb" id="2_l8jww"]
+[ext_resource type="PackedScene" uid="uid://d3ww3001sjxyb" path="res://library/props/robot_arm/robot_arm.tscn" id="3_jfy0f"]
+[ext_resource type="PackedScene" uid="uid://cf0gw5mk0wwr0" path="res://library/props/modular_build/very_basic/2x2_floor_tile.glb" id="3_pajag"]
+
+[node name="SimpleLab" type="Node3D" unique_id=603540754]
+
+[node name="desk" parent="." unique_id=2027380900 instance=ExtResource("2_l8jww")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, -0.41288865)
+
+[node name="Floor" type="Node3D" parent="." unique_id=647669234]
+
+[node name="2x2_floor_tile" parent="Floor" unique_id=2088466735 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="2x2_floor_tile2" parent="Floor" unique_id=633010014 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+
+[node name="2x2_floor_tile3" parent="Floor" unique_id=1405453085 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+
+[node name="2x2_floor_tile4" parent="Floor" unique_id=828419167 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+
+[node name="2x2_floor_tile5" parent="Floor" unique_id=2096022650 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+
+[node name="2x2_floor_tile6" parent="Floor" unique_id=67252295 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="2x2_floor_tile7" parent="Floor" unique_id=1647437420 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 3)
+
+[node name="2x2_floor_tile8" parent="Floor" unique_id=374868446 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 5)
+
+[node name="2x2_floor_tile9" parent="Floor" unique_id=1055181721 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1)
+
+[node name="2x2_floor_tile10" parent="Floor" unique_id=1346000352 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 3)
+
+[node name="2x2_floor_tile11" parent="Floor" unique_id=899556841 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 5)
+
+[node name="2x2_floor_tile12" parent="Floor" unique_id=1419040713 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1)
+
+[node name="2x2_floor_tile13" parent="Floor" unique_id=2049773936 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+
+[node name="2x2_floor_tile14" parent="Floor" unique_id=1037219564 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 5)
+
+[node name="2x2_floor_tile15" parent="Floor" unique_id=2043811599 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+
+[node name="2x2_floor_tile16" parent="Floor" unique_id=1831138905 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+
+[node name="2x2_floor_tile17" parent="Floor" unique_id=1697233498 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3)
+
+[node name="2x2_floor_tile18" parent="Floor" unique_id=2140314395 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1)
+
+[node name="2x2_floor_tile19" parent="Floor" unique_id=733866940 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -3)
+
+[node name="2x2_floor_tile20" parent="Floor" unique_id=1648081150 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1)
+
+[node name="2x2_floor_tile21" parent="Floor" unique_id=111714871 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -3)
+
+[node name="2x2_floor_tile22" parent="Floor" unique_id=2037350824 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1)
+
+[node name="2x2_floor_tile23" parent="Floor" unique_id=1808001579 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -3)
+
+[node name="2x2_floor_tile24" parent="Floor" unique_id=508071393 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1)
+
+[node name="2x2_floor_tile25" parent="Floor" unique_id=34174449 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -3)
+
+[node name="2x2_floor_tile26" parent="Floor" unique_id=613173674 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5)
+
+[node name="2x2_floor_tile27" parent="Floor" unique_id=29181214 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -7)
+
+[node name="2x2_floor_tile28" parent="Floor" unique_id=213759556 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -5)
+
+[node name="2x2_floor_tile29" parent="Floor" unique_id=1760836124 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -7)
+
+[node name="2x2_floor_tile30" parent="Floor" unique_id=2117647183 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -5)
+
+[node name="2x2_floor_tile31" parent="Floor" unique_id=1462519817 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -7)
+
+[node name="2x2_floor_tile32" parent="Floor" unique_id=738007760 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -5)
+
+[node name="2x2_floor_tile33" parent="Floor" unique_id=1041359195 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -7)
+
+[node name="2x2_floor_tile34" parent="Floor" unique_id=1372446921 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -5)
+
+[node name="2x2_floor_tile35" parent="Floor" unique_id=508312745 instance=ExtResource("3_pajag")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -7)
+
+[node name="RobotArm" parent="." unique_id=1988974409 instance=ExtResource("3_jfy0f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.175423, 0, -2.3653498)
+
+[node name="RobotArm2" parent="." unique_id=618611040 instance=ExtResource("3_jfy0f")]
+transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, -0.6432433, 0, -5.547501)

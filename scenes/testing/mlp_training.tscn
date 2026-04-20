@@ -1,6 +1,0 @@
-[gd_scene format=3 uid="uid://fn3woolc2xif"]
-
-[ext_resource type="Script" uid="uid://dep8tqdl3vmse" path="res://scripts/testing/mlp_training.gd" id="1_nvek1"]
-
-[node name="MLPTraining" type="Node" unique_id=1935524269]
-script = ExtResource("1_nvek1")

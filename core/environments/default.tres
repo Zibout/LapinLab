@@ -1,0 +1,9 @@
+[gd_resource type="Environment" format=3 uid="uid://dx87oxxvsilcj"]
+
+[resource]
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true

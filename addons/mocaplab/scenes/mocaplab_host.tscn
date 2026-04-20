@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dy7eb2rxpjxqj"]
+
+[ext_resource type="Script" uid="uid://bupuqtu003iy8" path="res://addons/mocaplab/scripts/mocaplab_host.gd" id="1_y0b2u"]
+
+[node name="MocaplabHost" type="Node" unique_id=761705352]
+script = ExtResource("1_y0b2u")

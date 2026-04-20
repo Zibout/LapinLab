@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bbj3p6w8dxefl"]
+
+[ext_resource type="PackedScene" uid="uid://dy7eb2rxpjxqj" path="res://addons/mocaplab/scenes/mocaplab_host.tscn" id="1_0xm2m"]
+[ext_resource type="Environment" uid="uid://dx87oxxvsilcj" path="res://core/environments/default.tres" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://w8aea62bkesf" path="res://core/avatar/lapin/lapin.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://ct3xp0q0dv11e" path="res://library/sets/simple_lab/simple_lab.tscn" id="3_h2yge"]
+
+[node name="Main" type="Node3D" unique_id=837551291]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=555502335]
+environment = ExtResource("1_1bvp3")
+
+[node name="MocaplabHost" parent="." unique_id=761705352 instance=ExtResource("1_0xm2m")]
+
+[node name="Lapin" parent="." unique_id=1376475019 instance=ExtResource("2_h2yge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.34355575)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=956464530]
+transform = Transform3D(0.9400205, -0.00063703826, -0.34111738, 0, 0.9999983, -0.0018675013, 0.34111798, 0.0017554895, 0.9400189, -0.79554105, 1.1871121, 1.5827849)
+fov = 54.4
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=879208805]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0305164, 0.9894937, 1.3867127)
+light_color = Color(0.7070702, 0.90988517, 0.3112304, 1)
+light_energy = 1.944
+shadow_enabled = true
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="." unique_id=925185338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9219296, 1.1539603, 1.3552403)
+light_color = Color(0.7604726, 0.29362604, 0.7021254, 1)
+light_energy = 2.015
+shadow_enabled = true
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="." unique_id=1729415605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6430819, 2.3527794, -2.3237562)
+light_color = Color(0.6210243, 0.41762248, 1.92523e-07, 1)
+light_energy = 6.902
+shadow_enabled = true
+
+[node name="SimpleLab" parent="." unique_id=603540754 instance=ExtResource("3_h2yge")]
+
+[connection signal="mocap_data_received" from="MocaplabHost" to="Lapin" method="_on_mocaplab_host_mocap_data_received"]
